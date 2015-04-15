@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7C3A0FF1AD76580005ACCFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C3A0FE1AD76580005ACCFA /* LoginViewController.swift */; };
 		D94B7DA41AB796D1008B2225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B7DA31AB796D1008B2225 /* AppDelegate.swift */; };
 		D94B7DA61AB796D1008B2225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B7DA51AB796D1008B2225 /* ViewController.swift */; };
 		D94B7DA91AB796D1008B2225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94B7DA71AB796D1008B2225 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7C3A0FE1AD76580005ACCFA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D94B7D9E1AB796D1008B2225 /* GSSM_CE_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSSM_CE_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94B7DA21AB796D1008B2225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D94B7DA31AB796D1008B2225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		D94B7D951AB796D1008B2225 = {
 			isa = PBXGroup;
 			children = (
+				A7C3A0FE1AD76580005ACCFA /* LoginViewController.swift */,
 				D94B7DA01AB796D1008B2225 /* GSSM_CE_Project */,
 				D94B7DB61AB796D1008B2225 /* GSSM_CE_ProjectTests */,
 				D94B7D9F1AB796D1008B2225 /* Products */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C3A0FF1AD76580005ACCFA /* LoginViewController.swift in Sources */,
 				D94B7DA61AB796D1008B2225 /* ViewController.swift in Sources */,
 				D94B7DA41AB796D1008B2225 /* AppDelegate.swift in Sources */,
 			);
@@ -407,6 +411,7 @@
 				D94B7DBF1AB796D1008B2225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D94B7DC01AB796D1008B2225 /* Build configuration list for PBXNativeTarget "GSSM_CE_ProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				D94B7DC21AB796D1008B2225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
