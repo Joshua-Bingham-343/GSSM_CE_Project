@@ -9,37 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var textField1: UITextField!
-    @IBOutlet weak var textField2: UITextField!
-    @IBOutlet weak var textField3: UITextField!
-    @IBOutlet weak var textField4: UITextField!
-    @IBOutlet weak var textField5: UITextField!
-    @IBOutlet weak var textField6: UITextField!
-    @IBOutlet weak var textField7: UITextField!
-    @IBOutlet weak var textField8: UITextField!
-    @IBOutlet weak var textField9: UITextField!
-    @IBOutlet weak var textField10: UITextField!
-    @IBOutlet weak var textField11: UITextField!
-    @IBOutlet weak var textField12: UITextField!
-    @IBOutlet weak var textField13: UITextField!
-    @IBOutlet weak var textField14: UITextField!
-    @IBOutlet weak var textField15: UITextField!
-    @IBOutlet weak var textField16: UITextField!
-    @IBOutlet weak var textField17: UITextField!
-    @IBOutlet weak var textField18: UITextField!
-    @IBOutlet weak var textField19: UITextField!
-    @IBOutlet weak var textField20: UITextField!
-    @IBOutlet weak var textField21: UITextField!
-    @IBOutlet weak var textField22: UITextField!
-    @IBOutlet weak var textField23: UITextField!
-    @IBOutlet weak var textField24: UITextField!
-    @IBOutlet weak var textField25: UITextField!
-    @IBOutlet weak var textField26: UITextField!
-    @IBOutlet weak var textField27: UITextField!
-    @IBOutlet weak var textField28: UITextField!
+    @IBOutlet weak var usernameBox: UITextField!
+    @IBOutlet weak var passwordBox: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    let model = Model()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.tabBarController?.tabBar.hidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -48,7 +26,53 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func loginPress(sender: UIButton) {
+        if(model.checkUsername(usernameBox.text)){
+            if(model.checkPassword(passwordBox.text)){
+                self.performSegueWithIdentifier("Load View", sender: loginButton)
+            }
+        }
+        
+    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "Load View") {
+            // pass data to next view
+        }
+    }
+    
+    @IBAction func usernameEdited(sender: UITextField) {
+        textFieldDidBeginEditing(sender)
+    }
+    
+    @IBAction func usernameFinished(sender: UITextField) {
+        textFieldDidEndEditing(sender)
+    }
+    
+    @IBAction func passwordEdited(sender: UITextField) {
+        textFieldDidBeginEditing(sender)
+    }
+    
+    @IBAction func passwordFinished(sender: UITextField) {
+        textFieldDidEndEditing(sender)
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        animateViewMoving(true, moveValue: 100)
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        animateViewMoving(false, moveValue: 100)
+    }
+    
+    func animateViewMoving (up:Bool, moveValue :CGFloat){
+        var movementDuration:NSTimeInterval = 0.3
+        var movement:CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
+        UIView.commitAnimations()
+    }
 
 
 }
