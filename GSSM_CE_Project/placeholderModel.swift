@@ -8,9 +8,10 @@
 
 import Foundation
 
-class Model {
+class Thingy {
     var usernames = ["jbingham15","zklein16","csylvester15","mott16","wblanchett15"]
     var password = ["mobileapps"]
+    var currentUsername:String = ""
     
     func checkUsername(username:String) ->Bool {
         if(contains(usernames, username)){
@@ -30,11 +31,11 @@ class Model {
         }
     }
     
-    func storeData(){
-        
+    func storeUsername(name:String) {
+        currentUsername = name
     }
     
-    func getData()->Double {
-        return 4.0
+    func getUsername()->String {
+        return currentUsername
     }
 }

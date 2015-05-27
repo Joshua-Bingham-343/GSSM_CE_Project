@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D9154FCE1B13F1F5005FC188 /* placeholderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9154FCD1B13F1F5005FC188 /* placeholderModel.swift */; };
+		D92E00781B14DD1800B5C664 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E00771B14DD1800B5C664 /* TabBarViewController.swift */; };
 		D94B7DA41AB796D1008B2225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B7DA31AB796D1008B2225 /* AppDelegate.swift */; };
 		D94B7DA61AB796D1008B2225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B7DA51AB796D1008B2225 /* ViewController.swift */; };
 		D94B7DA91AB796D1008B2225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94B7DA71AB796D1008B2225 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		D9154FCD1B13F1F5005FC188 /* placeholderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = placeholderModel.swift; sourceTree = "<group>"; };
+		D92E00771B14DD1800B5C664 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D94B7D9E1AB796D1008B2225 /* GSSM_CE_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSSM_CE_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94B7DA21AB796D1008B2225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D94B7DA31AB796D1008B2225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				D94B7DA11AB796D1008B2225 /* Supporting Files */,
 				D96F87F31B113D0500FD7CD9 /* CalendarViewController.swift */,
 				D9154FCD1B13F1F5005FC188 /* placeholderModel.swift */,
+				D92E00771B14DD1800B5C664 /* TabBarViewController.swift */,
 			);
 			path = GSSM_CE_Project;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				D96F87F41B113D0500FD7CD9 /* CalendarViewController.swift in Sources */,
 				D96F87F61B113E3D00FD7CD9 /* UploadViewController.swift in Sources */,
 				D94B7DA61AB796D1008B2225 /* ViewController.swift in Sources */,
+				D92E00781B14DD1800B5C664 /* TabBarViewController.swift in Sources */,
 				D94B7DA41AB796D1008B2225 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

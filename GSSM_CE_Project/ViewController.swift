@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordBox: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
-    let model = Model()
+    var model:Thingy! = Thingy()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginPress(sender: UIButton) {
-        if(model.checkUsername(usernameBox.text)){
-            if(model.checkPassword(passwordBox.text)){
+        if(model!.checkUsername(usernameBox.text)){
+            if(model!.checkPassword(passwordBox.text)){
                 self.performSegueWithIdentifier("Load View", sender: loginButton)
             }
         }
@@ -38,6 +38,11 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "Load View") {
             // pass data to next view
+            model!.storeUsername(usernameBox.text)
+            (segue.destinationViewController as! TabBarViewController).model = self.model
+            var tabControl = (segue.destinationViewController as! TabBarViewController)
+            var otherView:CalendarViewController = tabControl.viewControllers?[0] as! CalendarViewController
+            otherView.model = self.model
         }
     }
     
